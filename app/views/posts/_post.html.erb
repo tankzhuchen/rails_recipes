@@ -1,0 +1,20 @@
+
+<div class="description1">
+
+  <div class="caption">
+    <%= link_to post_path(post) do %>
+                          <h4><%= post.title %></h4>
+                          <% end %>
+
+
+                        <%= link_to post_path(post) do %>
+                        <% if post.image.present? %>
+                          <%= image_tag(post.image.thumb.url) %>
+                        <% else %>
+                          <%= image_tag("http://placehold.it/500x150&text=No Pic") %>
+                        <% end %>
+                          <% end %>
+
+    </div>
+    <hr>
+      </div>

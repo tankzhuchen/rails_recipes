@@ -1,0 +1,2 @@
+class Jg < ApplicationRecord
+end

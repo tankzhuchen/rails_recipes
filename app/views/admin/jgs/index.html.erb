@@ -1,0 +1,44 @@
+<h2> Product List </h2>
+<div class="pull-right" style="padding-bottom: 20px;">
+  <%= link_to("新增产品", new_admin_jg_path, class: "btn btn-primary btn-sm") %>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>产地</th>
+      <th>型号</th>
+      <th>报价</th>
+      <th>提货地</th>
+      <th>最近更新</th>
+      <th>功能</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @jgs.each do |jg| %>
+      <tr>
+        <td>
+         <%= jg.title %>
+       </td>
+       <td>
+<%= jg.description %>
+       </td>
+       <td>
+         <%= jg.price %>
+       </td>
+       <td>
+         <%= jg.quantity %>
+       </td>
+
+       <td>
+         <%= jg.time %>
+       </td>
+        <td>
+          <%= link_to("Edit", edit_admin_jg_path(jg)) %>
+          <%= link_to("Delete", admin_jg_path(jg),    class: "btn btn-sm btn-default",
+          method: :delete, data: { confirm: "Are you sure?" } )%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

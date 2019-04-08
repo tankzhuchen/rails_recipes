@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "font-awesome";
+
+
+
+//show页面的css样式设计
+ .description{
+   margin: auto;
+   font-size: 1.2em;
+   line-height: 1.8em;                   //拉开行高
+   text-align: justify;   //文本两端对齐
+   max-width: 650px;//最大宽度
+   img {
+     max-width:100%; height:auto;         //重要样式代码，实现不同大小屏幕下的响应式伸缩
+     border-radius: 6px;                 //为所有图片设置6px的圆角
+     }
+ }
+
+ .description1{
+   margin: auto;
+   font-size: 1.2em;
+   text-align: center;//文字左对齐
+
+   max-width: 500px;//最大宽度
+
+
+   img {
+     max-width:100%; height:auto;         //重要样式代码，实现不同大小屏幕下的响应式伸缩
+     border-radius: 6px;                 //为所有图片设置6px的圆角
+     }
+ }
+
+
+ .description2{
+   margin: auto;
+   max-width: 600px;//最大宽度
+ }
+
+
+ .footer-style {
+   background-color: #f5f5f5;
+ }
+ .footer-style h5 {
+   margin-top: 2em;
+   font-size: 1.6em;
+ }
+ .footer-style-p {
+   text-align: justify;
+   line-height: 2em;
+   letter-spacing: 0.1em;
+ }
+
+
+ .landing-page-mid {                                   //给图片整好形
+   height: 500px;
+   background-size: cover;                             //确保图片完全撑开
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-image: url("/images/1.jpg");
+   margin-top: -130px;//和顶部拉开距离
+
+ }
+ .landing-page-mid .tagline {                          //编写标题样式
+   text-align: center;
+   color: #FAFAFA;
+   letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+   font-size: 2.6em;
+
+ }
+ .landing-page-mid .tagp {                             //编写内容样式
+   text-align: center;
+   color: #FAFAFA;
+   font-size: 1.8em;
+margin-top: 150px;//和顶部拉开距离
+   line-height: 2.5em;                                 //行间距也要拉开大一些
+   letter-spacing: 0.18em;
+   background-color: rgba(100, 100, 100, 0.39);//背景颜色含透明度
+ }
+
+ .color {                          //编写标题样式
+   text-align: center;
+   color: #616161
+   }

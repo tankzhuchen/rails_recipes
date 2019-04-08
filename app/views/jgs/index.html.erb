@@ -1,0 +1,51 @@
+
+<div class="description2">
+
+<div class="panel panel-default">
+
+<table class="table table-hover table-striped">
+  <thead>
+
+<tr class="warning">
+
+      <th><h5>品名</h5></th>
+      <th><h5>型号</h5></th>
+      <th><h5>报价</h5></th>
+      <th><h5>提货</h5></th>
+      <th><h5>时间</h5></th>
+
+
+    </tr>
+
+  </thead>
+  <tbody>
+    <% @jgs.each do |jg| %>
+      <tr>
+         <td>
+           <h4>
+          <%= jg.title %>
+          </h4>
+        </td>
+        <td>
+          <h4><%= jg.description %></h4>
+        </td>
+        <td>
+          <h4><%= jg.price %></h4>
+        </td>
+          <td>
+        <h4>
+     <%= jg.quantity %></h4>
+      </td>
+        <td>
+          <h4><%= jg.time %></h4>
+        </td>
+
+      </tr>
+      <% end %>
+    </tbody>
+    </table>
+    <div class="panel-heading">
+        <br><br><br><h5><p>此处是共享报价，如果您有报价需要展示或者希望更多的人看到真实的报价！请添加微信:jichuyou2019 </p></h5>
+      </div>
+      </div>
+      </div>
