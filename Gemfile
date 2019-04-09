@@ -47,7 +47,6 @@ gem 'ckeditor', '4.2.4'
 gem 'pg'
 
 
-gem 'figaro'
 
 gem 'carrierwave-qiniu', '~> 1.1.6'
 gem 'qiniu-rs'
