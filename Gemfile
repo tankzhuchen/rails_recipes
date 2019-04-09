@@ -49,7 +49,7 @@ gem 'pg'
 
 gem 'figaro'
 
-gem 'carrierwave-qiniu'
+gem 'carrierwave-qiniu', '~> 1.1.6'
 gem 'qiniu-rs'
 gem 'figaro'
 
