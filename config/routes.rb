@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   namespace :admin do
      resources :posts
      resources :jgs
+     resources :wls
   end
   devise_for :users
   root "jgs#index"
 
+  resources :wls
   resources :jgs
   resources :posts
   resources :posts do

@@ -1,7 +1,6 @@
 class Admin::JgsController < ApplicationController
   before_action :authenticate_user!
   before_action :admin_required
-  layout "jgss"
 
    def index
      @jgs = Jg.all

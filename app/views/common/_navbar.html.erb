@@ -19,15 +19,14 @@
 
  <button type="button" class="btn btn-default navbar-btn "><%= link_to("油知识 | 资讯", posts_path, :class => "color") %> </button>
  <button type="button" class="btn btn-default navbar-btn "><%= link_to("看报价", jgs_path, :class => "color") %> </button>
+ <button type="button" class="btn btn-default navbar-btn "><%= link_to("找物流", wls_path, :class => "color") %> </button>
 
 
 
 
 
             <ul class="nav navbar-nav navbar-right">
-              <p class="navbar-text right">
-                  其它功能敬请期待！
-              </p>
+
 
                               <% if !current_user %>
 
@@ -42,6 +41,7 @@
               <li>
                  <%= link_to("文章后台", admin_posts_path ) %>
                  <%= link_to("报价后台", admin_jgs_path ) %>
+                  <%= link_to("物流后台", admin_wls_path ) %>
                </li>
              <% end %>
                         <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>

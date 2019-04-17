@@ -1,0 +1,36 @@
+<h2> Product List </h2>
+<div class="pull-right" style="padding-bottom: 20px;">
+  <%= link_to("新增产品", new_admin_wl_path, class: "btn btn-primary btn-sm") %>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>发货地</th>
+      <th>收货地</th>
+      <th>运输方式</th>
+      <th>报价</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @wls.each do |jg| %>
+      <tr>
+        <td>
+         <%= jg.title %>
+       </td>
+       <td>
+<%= jg.description %>
+       </td>
+
+       <td>
+         <%= jg.quantity %>
+       </td>
+       <td>
+         <%= jg.price %>
+       </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

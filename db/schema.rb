@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190408161433) do
+ActiveRecord::Schema.define(version: 20190416034854) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -86,6 +86,15 @@ ActiveRecord::Schema.define(version: 20190408161433) do
     t.boolean  "is_admin",               default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "wls", force: :cascade do |t|
+    t.text     "title"
+    t.text     "description"
+    t.text     "quantity"
+    t.text     "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
