@@ -33,6 +33,13 @@ before_action :admin_required
     end
   end
 
+
+    def destroy
+    @wl = Wl.find(params[:id])
+    @wl.destroy
+    redirect_to admin_wls_path
+  end
+
   private
 
   def wl_params

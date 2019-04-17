@@ -9,6 +9,7 @@
       <th>收货地</th>
       <th>运输方式</th>
       <th>报价</th>
+          <th>功能</th>
 
 
     </tr>
@@ -29,7 +30,11 @@
        <td>
          <%= jg.price %>
        </td>
-
+       <td>
+         <%= link_to("Edit", edit_admin_wl_path(jg)) %>
+         <%= link_to("Delete", admin_wl_path(jg),    class: "btn btn-sm btn-default",
+         method: :delete, data: { confirm: "Are you sure?" } )%>
+       </td>
       </tr>
     <% end %>
   </tbody>
