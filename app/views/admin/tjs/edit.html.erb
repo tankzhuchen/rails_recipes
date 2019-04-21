@@ -1,0 +1,28 @@
+<h2> New Product </h2>
+
+<%= simple_form_for [:admin, @tj] do |f| %>
+
+  <div class="group">
+    炼厂<%= f.input :title %>
+  </div>
+
+  <div class="group">
+    型号<%= f.input :description %>
+  </div>
+
+  <div class="group">
+    报价<%= f.input :price %>
+  </div>
+
+  <div class="group">
+    提货地<%= f.input :quantity %>
+  </div>
+
+
+  <div class="group">
+    更新日期<%= f.input :time %>
+  </div>
+
+  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+
+<% end %>

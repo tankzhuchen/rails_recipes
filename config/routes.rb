@@ -5,6 +5,7 @@ Rails.application.routes.draw do
      resources :posts
      resources :jgs
      resources :wls
+     resources :tjs
   end
   devise_for :users
   root "jgs#index"
