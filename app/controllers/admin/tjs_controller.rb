@@ -15,9 +15,9 @@ class Admin::TjsController < ApplicationController
     end
 
     def update
-      @wl = Tj.find(params[:id])
+      @tj = Tj.find(params[:id])
 
-      if @tj.update(wl_params)
+      if @tj.update(tj_params)
         redirect_to admin_tjs_path
       else
         render :edit
