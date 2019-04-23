@@ -8,7 +8,7 @@ Rails.application.routes.draw do
      resources :tjs
   end
   devise_for :users
-  root "jgs#index"
+  root "posts#index"
 
   resources :wls
   resources :jgs
