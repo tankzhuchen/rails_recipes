@@ -4,22 +4,40 @@
 
         <!-- Brand and toggle get grouped for better mobile display  -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >基础油网 </a>
-            <div class="navbar-header">
-              <button type="button" class="btn btn-default navbar-btn "><%= link_to("油知识 | 资讯", posts_path, :class => "color") %> </button>
-              <button type="button" class="btn btn-default navbar-btn "><%= link_to("看报价", jgs_path, :class => "color") %> </button>
-              <button type="button" class="btn btn-default navbar-btn "><%= link_to("指标库", zhibiaos_path, :class => "color") %> </button>
 
-            </div>
+            <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >基础油网 </a>
+
+
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
 
         </div>
 
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
+  <div class="navbar-header">
+        <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
 
 
+            <ul class="nav navbar-nav">
+              <button type="button" class="btn btn-default navbar-btn "><%= link_to("油知识 | 资讯", posts_path, :class => "color") %> </button>
 
+            </ul>
+            <ul class="nav navbar-nav">
+              <button type="button" class="btn btn-default navbar-btn "><%= link_to("看报价", jgs_path, :class => "color") %> </button>
+
+            </ul>
+            <ul class="nav navbar-nav">
+      <button type="button" class="btn btn-default navbar-btn "><%= link_to("指标库", zhibiaos_path, :class => "color") %> </button>
+
+            </ul>
+
+
+</div>
 
 
 
