@@ -1,0 +1,74 @@
+<h2> 修改指标 </h2>
+
+<%= simple_form_for [:admin, @zhibiao] do |f| %>
+
+  <div class="group">
+    API分类<%= f.input :sj %>
+  </div>
+
+  <div class="group">
+    厂家<%= f.input :cj %>
+  </div>
+
+  <div class="group">
+    型号<%= f.input :xh %>
+  </div>
+
+  <div class="group">
+    40度<%= f.input :ss %>
+  </div>
+
+  <div class="group">
+    100度<%= f.input :yb %>
+  </div>
+
+  <div class="group">
+    粘度指数<%= f.input :nz %>
+  </div>
+
+  <div class="group">
+    倾点<%= f.input :qd %>
+  </div>
+
+  <div class="group">
+    闪点<%= f.input :sd %>
+  </div>
+
+  <div class="group">
+    密度<%= f.input :md %>
+  </div>
+
+  <div class="group">
+    芳烃含量<%= f.input :ft %>
+  </div>
+
+  <div class="group">
+    蒸发损失<%= f.input :zf %>
+  </div>
+
+  <div class="group">
+    颜色<%= f.input :ys %>
+  </div>
+
+  <div class="group">
+    关键词索引<%= f.input :wg %>
+  </div>
+
+  <div class="group">
+    氧化安定性<%= f.input :yh %>
+  </div>
+
+  <div class="group">
+    酸值<%= f.input :sz %>
+  </div>
+
+  <div class="group">
+    硫含量<%= f.input :lh %>
+  </div>
+  <div class="group">
+     修改指标图片<%= f.input :image, as: :file %>
+   </div>
+
+  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+
+<% end %>

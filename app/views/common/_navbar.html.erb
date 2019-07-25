@@ -4,10 +4,11 @@
 
         <!-- Brand and toggle get grouped for better mobile display  -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >基础油首页 </a>
+            <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >基础油网 </a>
             <div class="navbar-header">
               <button type="button" class="btn btn-default navbar-btn "><%= link_to("油知识 | 资讯", posts_path, :class => "color") %> </button>
               <button type="button" class="btn btn-default navbar-btn "><%= link_to("看报价", jgs_path, :class => "color") %> </button>
+              <button type="button" class="btn btn-default navbar-btn "><%= link_to("指标库", zhibiaos_path, :class => "color") %> </button>
 
             </div>
 
@@ -39,6 +40,7 @@
                  <%= link_to("文章后台", admin_posts_path ) %>
                  <%= link_to("报价后台", admin_jgs_path ) %>
                   <%= link_to("物流后台", admin_wls_path ) %>
+                  <%= link_to("指标库后台", admin_zhibiaos_path ) %>
                </li>
              <% end %>
                         <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>

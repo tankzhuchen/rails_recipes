@@ -1,0 +1,2 @@
+class Zhibiao < ApplicationRecord
+end

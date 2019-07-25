@@ -1,53 +1,8 @@
 
 <div class="description2">
 
-  <div class="panel panel-default">
-    <div class="panel-heading center">
-  <h4><p>基础油特价区<br><h5>如果您有报价需要展示或希望采购基础油，我们将为您对接相关的公司！请添加微信 “  jichuyou2019  ” </h5> </h4>
-      </div>
-  <table class="table table-hover table-striped">
-    <thead>
 
-  <tr class="warning">
-
-        <th><h5>品名</h5></th>
-        <th><h5>型号</h5></th>
-        <th><h5>报价</h5></th>
-        <th><h5>提货</h5></th>
-        <th><h5>时间</h5></th>
-
-
-      </tr>
-
-    </thead>
-    <tbody>
-      <% @tjs.each do |tj| %>
-        <tr>
-           <td>
-             <h4>
-            <%= tj.title %>
-            </h4>
-          </td>
-          <td>
-            <h4><%= tj.description %></h4>
-          </td>
-          <td>
-            <h4><%= tj.price %></h4>
-          </td>
-            <td>
-          <h4>
-       <%= tj.quantity %></h4>
-        </td>
-          <td>
-            <h4><%= tj.time %></h4>
-          </td>
-
-        </tr>
-        <% end %>
-      </tbody>
-      </table>
-
-        </div>
+<br>
 <div class="panel panel-default">
   <div class="panel-heading">
 <h4>基础油市场价区<br><h5>如果您有报价需要展示或希望采购基础油，我们将为您对接相关的公司！请添加微信 “  jichuyou2019  ” </h5> </h4>

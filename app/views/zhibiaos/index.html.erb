@@ -1,0 +1,76 @@
+
+<div class="col-md-12 ">
+
+
+  <br>
+
+  <div class="description1">
+<%= search_form_for @q, :url => zhibiaos_path(@zhibiao) do |f| %>
+<p>
+<%= f.search_field :wg_cont, :placeholder => "可以搜索API分类、炼厂、产品", :class => "form-control" %><br>
+<%= submit_tag "搜索指标", :class => "btn btn-primary" %>
+
+
+</p>
+
+<h5>注：已更新136个指标! 持续更新中...</h5>
+
+
+
+
+<br>
+
+
+
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>API</th>
+        <th>炼厂</th>
+          <th>产品</th>
+
+      <th>更多</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @zhibiaos.each do |zhibiao| %>
+      <tr>
+        <td>
+
+
+          <%= zhibiao.sj %>
+
+        </td>
+          <td>
+            <%= zhibiao.cj %>
+          </td>
+            <td>
+              <%= zhibiao.xh %>
+            </td>
+
+
+        <td>
+
+   <button class="btn btn-default" type="submit">
+            <%= link_to zhibiao_path(zhibiao) do %>
+
+            详情
+
+
+            <% end %>
+              </button>
+          </td>
+
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+
+            <%= paginate @zhibiaos %>
+
+</div>
+  </div>

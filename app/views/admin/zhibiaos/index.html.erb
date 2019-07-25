@@ -1,0 +1,101 @@
+  <%= search_form_for @q, :url => admin_zhibiaos_path(@zhibiao) do |f| %>
+
+    <p><%= f.search_field :cj_cont, :placeholder => "姓名", :class => "form-control" %></p>
+    <p><%= f.search_field :xh_cont, :placeholder => "E-mail", :class => "form-control" %></p>
+
+    <p class="text-right">
+      <%= submit_tag "送出筛选", :class => "btn btn-primary" %>
+    </p>
+
+<h2> 后台-----指标列表</h2>
+<div class="pull-right" style="padding-bottom: 20px;">
+  <%= link_to("新增产品", new_admin_zhibiao_path, class: "btn btn-primary btn-sm") %>
+</div>
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>API分类</th>
+        <th>厂家</th>
+          <th>型号</th>
+            <th>40度</th>
+              <th>100度</th>
+                <th>粘指</th>
+                  <th>倾点</th>
+                    <th>闪点</th>
+                      <th>密度</th>
+                        <th>芳烃含量</th>
+                          <th>蒸发损失</th>
+                            <th>颜色</th>
+                              <th>关键词索引</th>
+                                <th>氧化安定性</th>
+                                    <th>酸值</th>
+      <th>硫含量</th>
+      <th>编辑功能</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @zhibiaos.each do |zhibiao| %>
+      <tr>
+        <td>
+          <%= zhibiao.sj %>
+        </td>
+          <td>
+            <%= zhibiao.cj %>
+          </td>
+            <td>
+              <%= zhibiao.xh %>
+            </td>
+              <td>
+                <%= zhibiao.ss %>
+              </td>
+                <td>
+                  <%= zhibiao.yb %>
+                </td>
+                  <td>
+                    <%= zhibiao.nz %>
+                  </td>
+                    <td>
+                      <%= zhibiao.qd %>
+                    </td>
+
+        <td>
+          <%= zhibiao.sd %>
+        </td>
+        <td>
+          <%= zhibiao.md %>
+        </td>
+          <td>
+            <%= zhibiao.ft %>
+          </td>
+            <td>
+              <%= zhibiao.zf %>
+            </td>
+              <td>
+                <%= zhibiao.ys %>
+              </td>
+                <td>
+                  <%= zhibiao.wg %>
+                </td>
+                  <td>
+                    <%= zhibiao.yh %>
+                  </td>
+                    <td>
+                      <%= zhibiao.sz %>
+                    </td>
+                      <td>
+                        <%= zhibiao.lh %>
+                      </td>
+        <td>
+          <%= link_to("Edit", edit_admin_zhibiao_path(zhibiao),    class: "btn btn-sm btn-default") %>
+          <%= link_to("Delete", admin_zhibiao_path(zhibiao),    class: "btn btn-sm btn-default",
+          method: :delete, data: { confirm: "Are you sure?" } )%>
+
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  <% end %>

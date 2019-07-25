@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190421131746) do
+ActiveRecord::Schema.define(version: 20190722094838) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20190421131746) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "image"
   end
 
   create_table "tjs", force: :cascade do |t|
@@ -105,6 +106,27 @@ ActiveRecord::Schema.define(version: 20190421131746) do
     t.text     "price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "zhibiaos", force: :cascade do |t|
+    t.text     "sj"
+    t.text     "cj"
+    t.text     "xh"
+    t.text     "ss"
+    t.text     "yb"
+    t.text     "nz"
+    t.text     "qd"
+    t.text     "sd"
+    t.text     "md"
+    t.text     "ft"
+    t.text     "zf"
+    t.text     "ys"
+    t.text     "wg"
+    t.text     "yh"
+    t.text     "sz"
+    t.text     "lh"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
