@@ -9,12 +9,14 @@ Rails.application.routes.draw do
      resources :tjs
   end
   devise_for :users
-  root "posts#index"
+  root "welcome#index"
   resources :zhibiaos
   resources :wls
+  resources :welcome
   resources :jgs
   resources :lszbs
   resources :posts
+  resources :welcome
   resources :posts do
     member do
       post "like" => "posts#like"

@@ -73,26 +73,11 @@
    background-size: cover;                             //确保图片完全撑开
    background-position: center center;
    background-repeat: no-repeat;
-   background-image: url("/images/1.jpg");
-   margin-top: -50px;//和顶部拉开距离
+   background-image: url("/images/222.jpg");
+   margin-top: -49px;//和顶部拉开距离
 
  }
- .landing-page-mid .tagline {                          //编写标题样式
-   text-align: center;
-   color: #FAFAFA;
-   letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
-   font-size: 2.6em;
 
- }
- .landing-page-mid .tagp {                             //编写内容样式
-   text-align: center;
-   color: #FAFAFA;
-   font-size: 1.8em;
-margin-top: 150px;//和顶部拉开距离
-   line-height: 2.5em;                                 //行间距也要拉开大一些
-   letter-spacing: 0.18em;
-   background-color: rgba(100, 100, 100, 0.39);//背景颜色含透明度
- }
 
  .color {                          //编写标题样式
    text-align: center;
@@ -114,3 +99,14 @@ margin-top: 150px;//和顶部拉开距离
   height: 100px; //定制图片高度
 
 }
+
+.nav1{
+
+ margin-left: 10px;//定制导航栏按钮靠左边3px，让左边有点空格
+ }
+
+ .color1 {
+   margin-top: 170px;//和顶部拉开距离               //编写标题样式
+   text-align: center;
+   color: #FAFAFA
+   }
